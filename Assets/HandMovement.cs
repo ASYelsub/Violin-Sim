@@ -4,13 +4,13 @@ using UnityEngine;
 //usage: move hand with mouse according to constraints
 public class HandMovement : MonoBehaviour
 {
-    Rigidbody myRigidbody;
     Transform myTransform;
-    Vector3 myInput;
-
+    public GameObject lowerArm;
+    public GameObject bow;
+    public GameObject upperArm;
     void Start()
     {
-        myRigidbody = GetComponent<Rigidbody>();
+
         myTransform = GetComponent<Transform>();
     }
 
@@ -19,13 +19,14 @@ public class HandMovement : MonoBehaviour
         //we want z transform to increase when pushing mouse up and to decrease when pushing mouse down
         float mouseY = Input.GetAxis("Mouse Y");
         float mouseX = Input.GetAxis("Mouse X");
-        myInput.y = 0f;
-        myInput.x = 0f;
-        myInput.z = mouseY;
+        bow.transform.Translate(new Vector3(0f,0f,-mouseY*.5f));
+        myTransform.Translate(new Vector3(0f,0f,-mouseY*.5f));
+        lowerArm.transform.Rotate(new Vector3(0f,-mouseY*10f,0f));
+        upperArm.transform.Rotate(new Vector3(0f,-mouseY*10f,0f));
+
+    
+         
+
     }
 
-    void FixedUpdate(){
-      
-        
-    }
 }
