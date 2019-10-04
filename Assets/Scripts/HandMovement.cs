@@ -8,6 +8,7 @@ public class HandMovement : MonoBehaviour
     public GameObject lowerArm;
     public GameObject bow;
     public GameObject upperArm;
+    public float sideMultiplier;
     void Start()
     {
 
@@ -22,8 +23,24 @@ public class HandMovement : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y");
         float mouseX = Input.GetAxis("Mouse X");
         //mouseY = Mathf.Clamp(mouseY, -1f, .5f);
-        Vector3 mouseInput = new Vector3(0f,0f,-mouseY);
+        if (myTransform.localPosition.x > 1.051){
+            mouseY = Mathf.Clamp(mouseY,0,50);
+        }
+        if (myTransform.localPosition.x < 0.838){
+            mouseY = Mathf.Clamp(mouseY,-50,0);
+        }
+        /*if(myTransform.position.z > -0.66){
+            mouseY = Mathf.Clamp(mouseY,0,100);
+        }
+        if(myTransform.position.z < -1.17){
+            mouseY = Mathf.Clamp(mouseY,0,100);
+        }*/
+        Vector3 mouseInput = new Vector3(mouseY,0f,0f);
+        //-mouseX*sideMultiplier
         myTransform.Translate(mouseInput);
+
+        
+
         /*bow.transform.Translate(new Vector3(0f,0f,-mouseY*.5f));
         
         lowerArm.transform.Rotate(new Vector3(0f,-mouseY*10f,0f));
