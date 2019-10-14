@@ -23,12 +23,12 @@ public class HandMovement : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y");
         float mouseX = Input.GetAxis("Mouse X");
         //mouseY = Mathf.Clamp(mouseY, -1f, .5f);
-        if (myTransform.localPosition.x > 1.051){
+        /*if (myTransform.localPosition.x > 1.051){
             mouseY = Mathf.Clamp(mouseY,0,50);
         }
         if (myTransform.localPosition.x < 0.838){
             mouseY = Mathf.Clamp(mouseY,-50,0);
-        }
+        }*/
         /*if(myTransform.position.z > -0.66){
             mouseY = Mathf.Clamp(mouseY,0,100);
         }
