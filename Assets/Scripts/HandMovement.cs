@@ -4,6 +4,8 @@ using UnityEngine;
 //usage: move hand with mouse according to constraints
 public class HandMovement : MonoBehaviour
 {
+    public DadBehavior dadBehavior;
+    public BarDecrease barDecrease;
     Transform myTransform;
     public GameObject lowerArm;
     public GameObject bow;
@@ -39,19 +41,22 @@ public class HandMovement : MonoBehaviour
         //-mouseX*sideMultiplier
         myTransform.Translate(mouseInput);
 
+        Debug.Log("myTransform.position.x = " + myTransform.position.x);
         
+        //PROBLEMS!
+        /*if (myTransform.position.x >= 0.7f || myTransform.position.x <= 1.2f){
+        dadBehavior.PickVoiceClip();
+        }*/
+        if (myTransform.position.x <= 0.7f){
+            dadBehavior.PickVoiceClip();
+            barDecrease.SheDecreases();
+        }
 
         /*bow.transform.Translate(new Vector3(0f,0f,-mouseY*.5f));
         
         lowerArm.transform.Rotate(new Vector3(0f,-mouseY*10f,0f));
         upperArm.transform.Rotate(new Vector3(0f,-mouseY*10f,0f));
-*/
-        
-        
-        
-        
-    
-         
+        */
 
     }
 
