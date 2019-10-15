@@ -1,43 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class DadBehavior : MonoBehaviour
 {
-    public AudioClip audio0;
-    public AudioClip audio1;
-    public AudioClip audio2;
-    public AudioClip audio3;
-    public AudioClip audio5;
-    /*void Update(){
-        if(Input.GetKey(KeyCode.Space)){
+    public AudioClip Audio0;
+    public AudioClip Audio1;
+    public AudioClip Audio2;
+    public AudioClip Audio3;
+    public AudioClip Audio4;
+
+     public float patBarLength;
+    
+    void Start(){
+        patBarLength = Screen.width / 2;
+    }
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Space)){
             PickVoiceClip();
         }
-    }*/
-    void Start(){
-        AudioSource myAudioSource = GetComponent<AudioSource>();
+        if(Input.GetKey(KeyCode.RightShift)){
+            
+        }
     }
-    public void PickVoiceClip(){
+    public IEnumerator PickVoiceClip(){
+        AudioSource myAudioSource = GetComponent<AudioSource>();
         int i = Random.Range(0,5);
         Debug.Log(i);
         if (i == 0){
-            myAudioSource.AudioClip = audio0;
+            myAudioSource.clip = Audio0;
         }
         else if (i == 1){
-
-        }
+            myAudioSource.clip = Audio1;
+         }
         else if (i == 2){
-            
-        }
+            myAudioSource.clip = Audio2;
+         }
         else if (i == 3){
-            
+            myAudioSource.clip = Audio3;
         }
         else if (i == 4){
-            
+            myAudioSource.clip = Audio4;
         }
-        else if (i == 5){
-            
-        }
+        myAudioSource.Play();
+        return null;
+        //yield return new WaitForSeconds(myAudioSource.clip.length);
     }    
        // Debug.Log("Watch your bow, Abby!");
         

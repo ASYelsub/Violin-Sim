@@ -1058,11 +1058,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a50515e863a594584eea9a70a36fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio0: {fileID: 8300000, guid: 2b1bc512d6fcf1c47a34e26afa823bab, type: 3}
-  audio1: {fileID: 8300000, guid: 6f5b2504b20c3cb4caef474c9ca6f819, type: 3}
-  audio2: {fileID: 8300000, guid: e0d5cc5edad669c42b1563302d4baf48, type: 3}
-  audio3: {fileID: 8300000, guid: dc515ee54ff75444c8b71bac8e4e6859, type: 3}
-  audio5: {fileID: 8300000, guid: a39e449a4f96b9949a146c3aa8ef9d4b, type: 3}
+  Audio0: {fileID: 8300000, guid: 2b1bc512d6fcf1c47a34e26afa823bab, type: 3}
+  Audio1: {fileID: 8300000, guid: 6f5b2504b20c3cb4caef474c9ca6f819, type: 3}
+  Audio2: {fileID: 8300000, guid: e0d5cc5edad669c42b1563302d4baf48, type: 3}
+  Audio3: {fileID: 8300000, guid: dc515ee54ff75444c8b71bac8e4e6859, type: 3}
+  Audio4: {fileID: 8300000, guid: a39e449a4f96b9949a146c3aa8ef9d4b, type: 3}
+  patienceBar: {fileID: 1527331119}
 --- !u!82 &692993198
 AudioSource:
   m_ObjectHideFlags: 0
