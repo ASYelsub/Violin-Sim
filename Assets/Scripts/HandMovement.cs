@@ -43,7 +43,7 @@ public class HandMovement : MonoBehaviour
         //-mouseX*sideMultiplier
         myTransform.Translate(mouseInput);
 
-        Debug.Log("myTransform.position.x = " + myTransform.position.x);
+//        Debug.Log("myTransform.position.x = " + myTransform.position.x);
         
         //PROBLEMS!
         /*if (myTransform.position.x >= 0.7f || myTransform.position.x <= 1.2f){
@@ -54,9 +54,8 @@ public class HandMovement : MonoBehaviour
             dadBehavior.StopMusic();
             if (!dadAudio.isPlaying){
             dadBehavior.PickVoiceClip();
-            dadPosition.transform.SetPositionAndRotation(new Vector3(0.1f,0.68f,0.18f),Quaternion.Euler(0f,211.508f,0f));
-            
             }
+            dadPosition.transform.SetPositionAndRotation(new Vector3(0.1f,0.68f,0.18f),Quaternion.Euler(0f,211.508f,0f));
         }
         else if (Mathf.Abs(mouseY) > 0f){
             barIncrease.SheIncreases();
@@ -66,9 +65,9 @@ public class HandMovement : MonoBehaviour
         }
         else if (Mathf.Abs(mouseY) == 0f){
             timer -= 1;
+            dadPosition.transform.SetPositionAndRotation(new Vector3(-1.43f,1.81f,0.88f),Quaternion.Euler(0f,211.508f,0f));
             if(timer <= 0f){
             dadBehavior.StopMusic();
-            dadPosition.transform.SetPositionAndRotation(new Vector3(-1.43f,1.81f,0.88f),Quaternion.Euler(0f,211.508f,0f));
             }
             
         }

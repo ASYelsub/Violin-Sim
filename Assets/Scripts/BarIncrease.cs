@@ -18,7 +18,9 @@ public class BarIncrease : MonoBehaviour
             if (sceneName == "Tuning"){
                 currentTime += Time.deltaTime*2;
             }
-            
+            if (sceneName == "Caprice 24"){
+                currentTime += Time.deltaTime*2;
+            }
  
             float ratio = currentTime / fullTime;
  
@@ -31,6 +33,12 @@ public class BarIncrease : MonoBehaviour
         if (transform.localScale.x >= 12f){
             if(sceneName == "Tuning"){
             SceneManager.LoadScene("Les Mis");
+            }
+            if(sceneName == "Les Mis"){
+                SceneManager.LoadScene("After Les Mis");
+            }
+            if(sceneName == "Caprice 24"){
+                SceneManager.LoadScene("End Screen");
             }
         }
     }
