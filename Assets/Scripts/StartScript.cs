@@ -7,8 +7,8 @@ public class StartScript : MonoBehaviour
 {
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)){
-            SceneManager.LoadScene(1);
+        if(Input.GetKeyDown(KeyCode.Mouse0)){
+            SceneManager.LoadScene("Tuning");
         }       
     }
 }

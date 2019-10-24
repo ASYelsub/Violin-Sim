@@ -5,22 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class BarIncrease : MonoBehaviour
 {
-   
 
-    float fullTime = 5.0f;
+    float fullTime = 5f;
     float currentTime = 0f;
     public void SheIncreases()
-    {
-            currentTime += Time.deltaTime*2;
+    {       
+            Scene currentScene = SceneManager.GetActiveScene ();
+            string sceneName = currentScene.name;
+            if (sceneName == "Les Mis"){
+                currentTime += Time.deltaTime*7;
+            }
+            if (sceneName == "Tuning"){
+                currentTime += Time.deltaTime*2;
+            }
+            
  
             float ratio = currentTime / fullTime;
  
             Vector3 currentScale = transform.localScale;
-            transform.localScale = new Vector3(Mathf.Clamp(ratio, 0f, 6f), currentScale.y, currentScale.z);           
+            transform.localScale = new Vector3(Mathf.Clamp(ratio, 0f, 12f), currentScale.y, currentScale.z);           
     }
     void Update(){
-        if (transform.localScale.x >= 6f){
-            SceneManager.LoadScene(2);
+        Scene currentScene = SceneManager.GetActiveScene ();
+        string sceneName = currentScene.name;
+        if (transform.localScale.x >= 12f){
+            if(sceneName == "Tuning"){
+            SceneManager.LoadScene("Les Mis");
+            }
         }
     }
 

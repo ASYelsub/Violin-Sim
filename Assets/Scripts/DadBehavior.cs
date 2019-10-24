@@ -7,15 +7,8 @@ using UnityEngine.UI;
 public class DadBehavior : MonoBehaviour
 {
     public AudioSource violinAudio;
-    public AudioClip Audio0;
-    public AudioClip Audio1;
-    public AudioClip Audio2;
-    public AudioClip Audio3;
-    public AudioClip Audio4;
-    public AudioClip Audio5;
-    public AudioClip Audio6;
-    public AudioClip Audio7;
-    public AudioClip Audio8;
+    public AudioClip Audio0,Audio1,Audio2,Audio3,Audio4,Audio5,Audio6,Audio7,Audio8;
+
    /*  float fullTime = 5.0f;
     float currentTime = 5.0f;*/
 
@@ -34,6 +27,7 @@ public class DadBehavior : MonoBehaviour
     }
     public IEnumerator PickVoiceClip(){
         AudioSource myAudioSource = GetComponent<AudioSource>();
+       // Transform myTransform = GetComponent<Transform>();
         int i = Random.Range(0,8);
         //Debug.Log(i);
         if (i == 0){
@@ -64,6 +58,11 @@ public class DadBehavior : MonoBehaviour
             myAudioSource.clip = Audio8;
         }
         myAudioSource.PlayOneShot(myAudioSource.clip);
+       
+//        float mouseY = Input.GetAxis("Mouse Y");
+  //      Vector3 mouseInput = new Vector3(0f,mouseY,0f);
+    //    myTransform.Rotate(mouseInput.x,mouseInput.y,mouseInput.z);
+       
         return null;
         //yield return new WaitForSeconds(myAudioSource.clip.length);
     }    

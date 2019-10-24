@@ -8,23 +8,18 @@ public class HandMovement : MonoBehaviour
     public BarDecrease barDecrease;
     public BarIncrease barIncrease;
     Transform myTransform;
-    public GameObject lowerArm;
-    public GameObject bow;
-    public GameObject upperArm;
+    public GameObject lowerArm,bow,upperArm;
     public float sideMultiplier;
 
-    public AudioSource dadAudio; 
-    public AudioSource violinAudio;
+    public AudioSource dadAudio,violinAudio;
 
     float timer;
-
+    public Transform dadPosition;
+    
     void Start()
     {
-
         myTransform = GetComponent<Transform>();
-
     }
-
     void Update()
     {
         //we want z transform to increase when pushing mouse up and to decrease when pushing mouse down
@@ -59,17 +54,21 @@ public class HandMovement : MonoBehaviour
             dadBehavior.StopMusic();
             if (!dadAudio.isPlaying){
             dadBehavior.PickVoiceClip();
+            dadPosition.transform.SetPositionAndRotation(new Vector3(0.1f,0.68f,0.18f),Quaternion.Euler(0f,211.508f,0f));
+            
             }
         }
         else if (Mathf.Abs(mouseY) > 0f){
             barIncrease.SheIncreases();
             dadBehavior.PlayMusic();
             timer = 10f;
+            dadPosition.transform.SetPositionAndRotation(new Vector3(-1.43f,1.81f,0.88f),Quaternion.Euler(0f,211.508f,0f));
         }
         else if (Mathf.Abs(mouseY) == 0f){
             timer -= 1;
             if(timer <= 0f){
             dadBehavior.StopMusic();
+            dadPosition.transform.SetPositionAndRotation(new Vector3(-1.43f,1.81f,0.88f),Quaternion.Euler(0f,211.508f,0f));
             }
             
         }
