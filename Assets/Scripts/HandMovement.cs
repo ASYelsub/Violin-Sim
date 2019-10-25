@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //usage: move hand with mouse according to constraints
 public class HandMovement : MonoBehaviour
 {
@@ -53,7 +54,17 @@ public class HandMovement : MonoBehaviour
             barDecrease.SheDecreases();
             dadBehavior.StopMusic();
             if (!dadAudio.isPlaying){
-            dadBehavior.PickVoiceClip();
+                Scene currentScene = SceneManager.GetActiveScene ();
+                string sceneName = currentScene.name;
+                if (sceneName == "Les Mis"){
+                    dadBehavior.PickVoiceClip(2);
+                }
+                else if (sceneName == "Tuning"){
+                    dadBehavior.PickVoiceClip(1);
+                }
+                else if (sceneName == "Caprice 24"){
+                    dadBehavior.PickVoiceClip(3);
+                }
             }
             dadPosition.transform.SetPositionAndRotation(new Vector3(0.1f,0.68f,0.18f),Quaternion.Euler(0f,211.508f,0f));
         }

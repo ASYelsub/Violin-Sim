@@ -12,15 +12,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Tuning.unity
     guid: 489b4727c96065c43a24cf7a5c25bbfd
   - enabled: 1
-    path: Assets/Scenes/Les Mis.unity
+    path: Assets/Scenes/Cursed.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Caprice 24.unity
-    guid: df3298ac2c7968440a3a8da09802e78c
   - enabled: 1
     path: Assets/Scenes/End Screen.unity
     guid: 072e39a268427974595f6b3cd7c4bfd9
   - enabled: 1
     path: Assets/Scenes/After Les Mis.unity
     guid: 2df48f61a8df8f241b087aad2a7a4eac
+  - enabled: 1
+    path: Assets/Scenes/Les Mis.unity
+    guid: 1ea017e7a9ed1654eb394416d9fd1ed7
+  - enabled: 1
+    path: Assets/Scenes/Caprice 24.unity
+    guid: 9866ae75bbb3f4547b20f5b626ce88ae
+  - enabled: 1
+    path: Assets/Scenes/Lose Screen.unity
+    guid: be74f47a91caede45923e3a31653704b
   m_configObjects: {}

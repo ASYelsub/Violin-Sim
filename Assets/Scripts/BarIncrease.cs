@@ -16,10 +16,10 @@ public class BarIncrease : MonoBehaviour
                 currentTime += Time.deltaTime*7;
             }
             if (sceneName == "Tuning"){
-                currentTime += Time.deltaTime*2;
+                currentTime += Time.deltaTime*5;
             }
             if (sceneName == "Caprice 24"){
-                currentTime += Time.deltaTime*2;
+                currentTime += Time.deltaTime*1.5f;
             }
  
             float ratio = currentTime / fullTime;

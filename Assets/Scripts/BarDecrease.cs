@@ -20,7 +20,7 @@ public class BarDecrease : MonoBehaviour
     }
     void Update(){
         if (transform.localScale.x <= 0f){
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("Lose Screen");
         }
     }
 }

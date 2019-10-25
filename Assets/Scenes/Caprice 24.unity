@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4478355, g: 0.49782497, b: 0.5754436, a: 1}
+  m_IndirectSpecularColor: {r: 0.37312084, g: 0.38074103, b: 0.35872775, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1007,15 +1007,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   violinAudio: {fileID: 6959900863142498408}
-  Audio0: {fileID: 8300000, guid: 51c8ba2683cfc12409d7403c8ef3c2ea, type: 3}
-  Audio1: {fileID: 8300000, guid: 1eb1c05b4a251a7478936e6fac08e3b8, type: 3}
-  Audio2: {fileID: 8300000, guid: 02ad8647afed27a478f0806000055875, type: 3}
-  Audio3: {fileID: 8300000, guid: c12172e8ff6439948a7165664abb2944, type: 3}
-  Audio4: {fileID: 8300000, guid: 3ae472949486df44d9b60d4ee3422d80, type: 3}
-  Audio5: {fileID: 8300000, guid: bfc23b30c0f478c4cb206647ae706809, type: 3}
-  Audio6: {fileID: 8300000, guid: 686d9a267a901984893652509da7ef37, type: 3}
-  Audio7: {fileID: 8300000, guid: 8e7d47bf2faa5fd47a7ed276879d5b7f, type: 3}
-  Audio8: {fileID: 8300000, guid: deea7ab8ef5991e4e8296fc2ef0a32bd, type: 3}
+  LesMis1: {fileID: 8300000, guid: eab429db31ebec040a4a7bc6ea4998d5, type: 3}
+  LesMis2: {fileID: 8300000, guid: 3502bc4c770c50841b9fa7f334b79386, type: 3}
+  LesMis3: {fileID: 8300000, guid: 19e3ecf427ad5ad46be160304f40260a, type: 3}
+  LesMis4: {fileID: 8300000, guid: d06c781c70a172740bb9959a95e9e1e8, type: 3}
+  LesMis5: {fileID: 8300000, guid: 2e4ca22f4427f9843af555c7399a8547, type: 3}
+  LesMis6: {fileID: 8300000, guid: fc9af5b737469874eaeb8ea8a2bb5129, type: 3}
+  Tuning1: {fileID: 8300000, guid: deea7ab8ef5991e4e8296fc2ef0a32bd, type: 3}
+  Tuning2: {fileID: 8300000, guid: 1eb1c05b4a251a7478936e6fac08e3b8, type: 3}
+  Tuning3: {fileID: 8300000, guid: 51c8ba2683cfc12409d7403c8ef3c2ea, type: 3}
+  Tuning4: {fileID: 8300000, guid: 341f572e2071e594fa63e4d7daf276ae, type: 3}
+  Tuning5: {fileID: 8300000, guid: e6f77461d29f6f141b5d76d29d092105, type: 3}
+  Tuning6: {fileID: 8300000, guid: aba025c4fe1eff347813f3b39fe328a9, type: 3}
+  Tuning7: {fileID: 8300000, guid: 2fcc39a29f342c14c8f1dee57a73eae6, type: 3}
+  Tuning8: {fileID: 8300000, guid: 29a188271d54dc84b9216c376bd39522, type: 3}
+  Tuning9: {fileID: 8300000, guid: d357cb45da43bbd4988cb13997f9a300, type: 3}
+  Paganini1: {fileID: 8300000, guid: 8e7781bffc6fff64fb93c3d81cf4d4f6, type: 3}
+  Paganini2: {fileID: 8300000, guid: deea7ab8ef5991e4e8296fc2ef0a32bd, type: 3}
+  Paganini3: {fileID: 8300000, guid: c4c320f82c6d80f489f037bbd468bfbf, type: 3}
+  Paganini4: {fileID: 8300000, guid: 02ad8647afed27a478f0806000055875, type: 3}
+  Paganini5: {fileID: 8300000, guid: 51a6ee0e36e1333419ef7a05d6d2b204, type: 3}
+  Paganini6: {fileID: 8300000, guid: 2fcc39a29f342c14c8f1dee57a73eae6, type: 3}
 --- !u!82 &466320386
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1027,14 +1039,14 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 66
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1647,8 +1659,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.102288e+13, y: 7.9316175e+34, z: 1.7486412e+25,
-    w: 2.996104e+12}
+  m_BoundingSphereOverride: {x: 2.258339e+11, y: 2.258339e+11, z: 2.258339e+11, w: 2.258339e+11}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1659,13 +1670,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.3332361, y: 0.22625344, z: -0.35395396, w: 0.84408516}
-  m_LocalPosition: {x: 33, y: 5.59, z: -2.96}
+  m_LocalRotation: {x: -0, y: -0.6371769, z: -0, w: 0.7707177}
+  m_LocalPosition: {x: 5.47, y: 4.99, z: 0.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 46.28, y: 12.2, z: -40.27}
+  m_LocalEulerAnglesHint: {x: 0, y: -79.163, z: 0}
 --- !u!1 &707754605
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,15 +3260,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f50b1e2accdb394fb923d7cafb5c899, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3f0b1c504a242614892eec319757f913, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 116
+  Priority: 4
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
